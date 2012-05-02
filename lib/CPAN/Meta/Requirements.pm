@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package CPAN::Meta::Requirements;
-our $VERSION = '2.121'; # VERSION
+our $VERSION = '2.122'; # VERSION
 # ABSTRACT: a set of version requirements for a CPAN dist
 
 
@@ -441,7 +441,7 @@ CPAN::Meta::Requirements - a set of version requirements for a CPAN dist
 
 =head1 VERSION
 
-version 2.121
+version 2.122
 
 =head1 SYNOPSIS
 
@@ -663,13 +663,13 @@ L<CPAN::Meta::Spec/Version Ranges>. For example:
 
 =item == 1.3
 
-=item ! 1.3
+=item != 1.3
 
 =item > 1.3
 
 =item < 1.3
 
-=item >= 1.3, ! 1.5, <= 2.0
+=item >= 1.3, != 1.5, <= 2.0
 
 A version number without an operator is equivalent to specifying a minimum
 (C<E<gt>=>).  Extra whitespace is allowed.
