@@ -4,13 +4,17 @@ author:
   - 'David Golden <dagolden@cpan.org>'
   - 'Ricardo Signes <rjbs@cpan.org>'
 build_requires:
-  File::Find: 0
+  ExtUtils::MakeMaker: 0
+  File::Spec::Functions: 0
   File::Temp: 0
+  IO::Handle: 0
+  IPC::Open3: 0
+  List::Util: 0
   Test::More: 0.88
 configure_requires:
   ExtUtils::MakeMaker: 6.17
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300014, CPAN::Meta::Converter version 2.120630'
+generated_by: 'Dist::Zilla version 4.300037, CPAN::Meta::Converter version 2.132140'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -27,7 +31,7 @@ no_index:
 provides:
   CPAN::Meta::Requirements:
     file: lib/CPAN/Meta/Requirements.pm
-    version: 2.122
+    version: 2.123
 requires:
   Carp: 0
   Scalar::Util: 0
@@ -36,7 +40,8 @@ requires:
   version: 0.77
   warnings: 0
 resources:
-  bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Meta-Requirements
-  homepage: https://github.com/dagolden/cpan-meta-requirements
-  repository: https://github.com/dagolden/cpan-meta-requirements.git
-version: 2.122
+  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Meta-Requirements
+  homepage: https://metacpan.org/release/CPAN-Meta-Requirements
+  repository: git://github.com/dagolden/cpan-meta-requirements.git
+version: 2.123
+x_authority: cpan:DAGOLDEN

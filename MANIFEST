@@ -10,6 +10,7 @@ dist.ini
 lib/CPAN/Meta/Requirements.pm
 perlcritic.rc
 t/00-compile.t
+t/00-report-prereqs.t
 t/accepts.t
 t/bad_version_hook.t
 t/basic.t
@@ -19,6 +20,7 @@ t/merge.t
 xt/author/critic.t
 xt/author/pod-spell.t
 xt/release/distmeta.t
+xt/release/minimum-version.t
 xt/release/pod-coverage.t
 xt/release/pod-syntax.t
 xt/release/portability.t
