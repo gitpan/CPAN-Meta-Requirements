@@ -28,6 +28,7 @@ my %WriteMakefileArgs = (
   },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
+    "File::Spec" => 0,
     "File::Spec::Functions" => 0,
     "File::Temp" => 0,
     "IO::Handle" => 0,
@@ -35,7 +36,7 @@ my %WriteMakefileArgs = (
     "List::Util" => 0,
     "Test::More" => "0.88"
   },
-  "VERSION" => "2.123",
+  "VERSION" => "2.124",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -71,8 +72,12 @@ unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
 delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
   unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
 
-$WriteMakefileArgs{INSTALLDIRS} = 'perl'
-    if $] <= 5.011000;
+if ( $] < 5.012
+  && ! ( $ENV{PERL_MM_OPT} && $ENV{PERL_MM_OPT} =~ /(?:INSTALL_BASE|PREFIX)/ )
+  && ! grep { /INSTALL_BASE/ || /PREFIX/ } @ARGV
+) {
+    $WriteMakefileArgs{UNINST} = 1;
+}
 
 WriteMakefile(%WriteMakefileArgs);
 

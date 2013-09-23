@@ -1,3 +1,4 @@
+CONTRIBUTING
 Changes
 LICENSE
 MANIFEST
@@ -5,7 +6,7 @@ META.json
 META.yml
 Makefile.PL
 README
-README.PATCHING
+cpanfile
 dist.ini
 lib/CPAN/Meta/Requirements.pm
 perlcritic.rc
