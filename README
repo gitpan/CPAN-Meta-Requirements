@@ -2,7 +2,7 @@ NAME
     CPAN::Meta::Requirements - a set of version requirements for a CPAN dist
 
 VERSION
-    version 2.125
+    version 2.126
 
 SYNOPSIS
       use CPAN::Meta::Requirements;
@@ -20,8 +20,9 @@ SYNOPSIS
 DESCRIPTION
     A CPAN::Meta::Requirements object models a set of version constraints
     like those specified in the META.yml or META.json files in CPAN
-    distributions. It can be built up by adding more and more constraints,
-    and it will reduce them to the simplest representation.
+    distributions, and as defined by CPAN::Meta::Spec; It can be built up by
+    adding more and more constraints, and it will reduce them to the
+    simplest representation.
 
     Logically impossible constraints will be identified immediately by
     thrown exceptions.
@@ -31,12 +32,10 @@ METHODS
       my $req = CPAN::Meta::Requirements->new;
 
     This returns a new CPAN::Meta::Requirements object. It takes an optional
-    hash reference argument. The following keys are supported:
+    hash reference argument. Currently, only one key is supported:
 
-    *   <bad_version_hook> -- if provided, when a version cannot be parsed
-        into
-
-        a version object, this code reference will be called with the
+    *   "bad_version_hook" -- if provided, when a version cannot be parsed
+        into a version object, this code reference will be called with the
         invalid version string as an argument. It must return a valid
         version object.
 
@@ -98,7 +97,7 @@ METHODS
     This method returns the requirements object.
 
   accepts_module
-      my $bool = $req->accepts_modules($module => $version);
+      my $bool = $req->accepts_module($module => $version);
 
     Given an module and version, this method returns true if the version
     specification for the module accepts the provided version. In other
@@ -156,7 +155,7 @@ METHODS
 
   as_string_hash
     This returns a reference to a hash describing the requirements using the
-    strings in the META.yml specification.
+    strings in the CPAN::Meta::Spec specification.
 
     For example after the following program:
 
@@ -228,6 +227,11 @@ AUTHORS
     *   David Golden <dagolden@cpan.org>
 
     *   Ricardo Signes <rjbs@cpan.org>
+
+CONTRIBUTORS
+    *   Karen Etheridge <ether@cpan.org>
+
+    *   robario <webmaster@robario.com>
 
 COPYRIGHT AND LICENSE
     This software is copyright (c) 2010 by David Golden and Ricardo Signes.
