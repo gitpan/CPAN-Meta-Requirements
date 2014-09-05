@@ -5,7 +5,7 @@
       "Ricardo Signes <rjbs@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142060",
+   "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.140640",
    "license" : [
       "perl_5"
    ],
@@ -35,6 +35,7 @@
          "requires" : {
             "Dist::Zilla" : "5",
             "Dist::Zilla::Plugin::MakeMaker::Highlander" : "0.003",
+            "Dist::Zilla::Plugin::Prereqs" : "0",
             "Dist::Zilla::PluginBundle::DAGOLDEN" : "0.060",
             "File::Spec" : "0",
             "File::Temp" : "0",
@@ -50,11 +51,12 @@
       },
       "runtime" : {
          "requires" : {
+            "B" : "0",
             "Carp" : "0",
             "Scalar::Util" : "0",
             "perl" : "5.006",
             "strict" : "0",
-            "version" : "0.77",
+            "version" : "0.88",
             "warnings" : "0"
          }
       },
@@ -65,17 +67,15 @@
          "requires" : {
             "ExtUtils::MakeMaker" : "0",
             "File::Spec" : "0",
-            "File::Spec::Functions" : "0",
-            "List::Util" : "0",
-            "Scalar::Util" : "0",
-            "Test::More" : "0.88"
+            "Test::More" : "0.88",
+            "version" : "0.88"
          }
       }
    },
    "provides" : {
       "CPAN::Meta::Requirements" : {
          "file" : "lib/CPAN/Meta/Requirements.pm",
-         "version" : "2.126"
+         "version" : "2.127"
       }
    },
    "release_status" : "stable",
@@ -90,7 +90,7 @@
          "web" : "https://github.com/dagolden/CPAN-Meta-Requirements"
       }
    },
-   "version" : "2.126",
+   "version" : "2.127",
    "x_authority" : "cpan:DAGOLDEN",
    "x_contributors" : [
       "Karen Etheridge <ether@cpan.org>",

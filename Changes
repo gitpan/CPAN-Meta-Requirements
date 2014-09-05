@@ -1,5 +1,19 @@
 Revision history for CPAN-Meta-Requirements
 
+2.127     2014-09-04 22:17:44-04:00 America/New_York
+
+    [FIXED]
+
+    - Works around limitations in version::vpp detecting v-string magic
+
+    [PREREQS]
+
+    - Requires version.pm 0.88 in metadata, but code should work with any
+      version of version.pm
+
+    - Adds support for forthcoming ExtUtils::MakeMaker bootstrap version.pm
+      for Perls older than 5.10.0
+
 2.126     2014-07-30 16:26:29-04:00 America/New_York
 
     [FIXED]

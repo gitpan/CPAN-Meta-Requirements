@@ -20,21 +20,20 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "CPAN::Meta::Requirements",
   "PREREQ_PM" => {
+    "B" => 0,
     "Carp" => 0,
     "Scalar::Util" => 0,
     "strict" => 0,
-    "version" => "0.77",
+    "version" => "0.88",
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
-    "File::Spec::Functions" => 0,
-    "List::Util" => 0,
-    "Scalar::Util" => 0,
-    "Test::More" => "0.88"
+    "Test::More" => "0.88",
+    "version" => "0.88"
   },
-  "VERSION" => "2.126",
+  "VERSION" => "2.127",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -42,15 +41,14 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "B" => 0,
   "Carp" => 0,
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
-  "File::Spec::Functions" => 0,
-  "List::Util" => 0,
   "Scalar::Util" => 0,
   "Test::More" => "0.88",
   "strict" => 0,
-  "version" => "0.77",
+  "version" => "0.88",
   "warnings" => 0
 );
 

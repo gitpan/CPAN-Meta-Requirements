@@ -6,14 +6,12 @@ author:
 build_requires:
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
-  File::Spec::Functions: '0'
-  List::Util: '0'
-  Scalar::Util: '0'
   Test::More: '0.88'
+  version: '0.88'
 configure_requires:
   ExtUtils::MakeMaker: '6.17'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142060'
+generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -30,19 +28,20 @@ no_index:
 provides:
   CPAN::Meta::Requirements:
     file: lib/CPAN/Meta/Requirements.pm
-    version: '2.126'
+    version: '2.127'
 requires:
+  B: '0'
   Carp: '0'
   Scalar::Util: '0'
   perl: '5.006'
   strict: '0'
-  version: '0.77'
+  version: '0.88'
   warnings: '0'
 resources:
   bugtracker: https://github.com/dagolden/CPAN-Meta-Requirements/issues
   homepage: https://github.com/dagolden/CPAN-Meta-Requirements
   repository: https://github.com/dagolden/CPAN-Meta-Requirements.git
-version: '2.126'
+version: '2.127'
 x_authority: cpan:DAGOLDEN
 x_contributors:
   - 'Karen Etheridge <ether@cpan.org>'

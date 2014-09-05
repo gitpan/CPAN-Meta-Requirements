@@ -19,6 +19,7 @@ t/basic.t
 t/finalize.t
 t/from-hash.t
 t/merge.t
+t/version-cleanup.t
 xt/author/00-compile.t
 xt/author/critic.t
 xt/author/pod-spell.t
