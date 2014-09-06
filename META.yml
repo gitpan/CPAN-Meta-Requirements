@@ -28,7 +28,7 @@ no_index:
 provides:
   CPAN::Meta::Requirements:
     file: lib/CPAN/Meta/Requirements.pm
-    version: '2.127'
+    version: '2.128'
 requires:
   B: '0'
   Carp: '0'
@@ -41,7 +41,7 @@ resources:
   bugtracker: https://github.com/dagolden/CPAN-Meta-Requirements/issues
   homepage: https://github.com/dagolden/CPAN-Meta-Requirements
   repository: https://github.com/dagolden/CPAN-Meta-Requirements.git
-version: '2.127'
+version: '2.128'
 x_authority: cpan:DAGOLDEN
 x_contributors:
   - 'Karen Etheridge <ether@cpan.org>'
