@@ -2,7 +2,7 @@ NAME
     CPAN::Meta::Requirements - a set of version requirements for a CPAN dist
 
 VERSION
-    version 2.129
+    version 2.130
 
 SYNOPSIS
       use CPAN::Meta::Requirements;
@@ -36,8 +36,8 @@ METHODS
 
     *   "bad_version_hook" -- if provided, when a version cannot be parsed
         into a version object, this code reference will be called with the
-        invalid version string as an argument. It must return a valid
-        version object.
+        invalid version string as first argument, and the module name as
+        second argument. It must return a valid version object.
 
     All other keys are ignored.
 
@@ -206,11 +206,14 @@ METHODS
 
   from_string_hash
       my $req = CPAN::Meta::Requirements->from_string_hash( \%hash );
+      my $req = CPAN::Meta::Requirements->from_string_hash( \%hash, \%opts );
 
     This is an alternate constructor for a CPAN::Meta::Requirements object.
     It takes a hash of module names and version requirement strings and
     returns a new CPAN::Meta::Requirements object. As with
-    add_string_requirement, a version can be a Perl "v-string".
+    add_string_requirement, a version can be a Perl "v-string". Optionally,
+    you can supply a hash-reference of options, exactly as with the "new"
+    method.
 
 SUPPORT
   Bugs / Feature Requests

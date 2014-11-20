@@ -77,7 +77,7 @@
    "provides" : {
       "CPAN::Meta::Requirements" : {
          "file" : "lib/CPAN/Meta/Requirements.pm",
-         "version" : "2.129"
+         "version" : "2.130"
       }
    },
    "release_status" : "stable",
@@ -92,7 +92,7 @@
          "web" : "https://github.com/dagolden/CPAN-Meta-Requirements"
       }
    },
-   "version" : "2.129",
+   "version" : "2.130",
    "x_authority" : "cpan:DAGOLDEN",
    "x_contributors" : [
       "Ed J <mohawk2@users.noreply.github.com>",
