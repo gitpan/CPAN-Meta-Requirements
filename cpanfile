@@ -1,6 +1,5 @@
 requires "B" => "0";
 requires "Carp" => "0";
-requires "Scalar::Util" => "0";
 requires "perl" => "5.006";
 requires "strict" => "0";
 requires "version" => "0.88";
@@ -38,4 +37,5 @@ on 'develop' => sub {
   requires "Test::Pod" => "1.41";
   requires "Test::Pod::Coverage" => "1.08";
   requires "Test::Spelling" => "0.12";
+  requires "Test::Version" => "1";
 };
